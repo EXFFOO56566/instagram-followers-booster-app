@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dimen16dp"
+    tools:background="#ffffff">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/campton_bold"
+        android:text="Reward to you"
+        android:textAppearance="@style/TextView.Primary"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_18" />
+
+    <ImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="?selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_delete"
+        android:tint="@color/black"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="5dp"
+        android:text="Congratulation! You got 1 more ⭐️ for task completed. Keep moving 🤘🤘🤘 together"
+        android:textAppearance="@style/TextView.Secondary"
+        android:textColor="@color/color_text_secondary_dark" />
+
+    <ImageView
+        android:id="@+id/img_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_message"
+        android:layout_marginVertical="@dimen/dimen16dp"
+        android:src="@drawable/background_illustration_gifbox" />
+
+    <FrameLayout
+        android:id="@+id/ad_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_banner"
+        android:animateLayoutChanges="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ad_view"
+        android:layout_marginTop="@dimen/dimen16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_star"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/campton_bold"
+            android:gravity="center_vertical"
+            android:text="+01 ⭐"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/btn_negative"
+            style="@style/Button.Solid"
+            android:layout_width="90dp"
+            android:layout_height="@dimen/dimen32dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@+id/btn_positive"
+            android:backgroundTint="@color/_e2e1e2"
+            android:gravity="center"
+            android:lineSpacingExtra="0.2dp"
+            android:text="Close"
+            android:textAppearance="@style/TextView.Primary.Bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_10"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/btn_positive"
+            style="@style/Button.Solid"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen32dp"
+            android:gravity="center"
+            android:lineSpacingExtra="0.2dp"
+            android:paddingHorizontal="20dp"
+            android:text="Ok"
+            android:textAppearance="@style/TextView.Primary.Bold"
+            android:textSize="@dimen/text_size_10" />
+    </LinearLayout>
+
+</RelativeLayout>

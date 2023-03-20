@@ -1,0 +1,23 @@
+ext {
+    android = [
+            applicationId    : "app.witwork.instabooster",
+            minSdkVersion    : 26,
+            targetSdkVersion : 31,
+            compileSdkVersion: 31,
+    ]
+
+    versionInfo = [
+            versionCode: 12,
+            versionName: "1.0.1",
+            apkName    : "InstaBooster"
+    ]
+
+    configs = [
+            apiKey                : "share_secret_key",
+            ad_id                 : "ca-app-pub-3940256099942544~3347511713",
+            ad_native_unit_boost  : "ca-app-pub-3940256099942544/2247696110",
+            ad_native_unit_shop   : "ca-app-pub-3940256099942544/2247696110",
+            ad_native_unit_popup  : "ca-app-pub-3940256099942544/2247696110",
+            ad_reward_unit_profile: "ca-app-pub-3940256099942544/5224354917"
+    ]
+}

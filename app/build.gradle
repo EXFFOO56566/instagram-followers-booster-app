@@ -1,0 +1,108 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs'
+}
+
+android {
+    def androidConf = rootProject.ext.android
+    def versionInfo = rootProject.ext.versionInfo
+    def configs = rootProject.ext.configs
+
+    compileSdk androidConf.compileSdkVersion
+
+    defaultConfig {
+        applicationId androidConf.applicationId
+        minSdk androidConf.minSdkVersion
+        targetSdk androidConf.targetSdkVersion
+        versionCode versionInfo.versionCode
+        versionName versionInfo.versionName
+
+        buildConfigField("String", "API_KEY", "\"" + configs.apiKey + "\"")
+
+        resValue("string", "ad_id", configs.ad_id)
+        resValue("string", "ad_native_unit_boost", configs.ad_native_unit_boost)
+        resValue("string", "ad_native_unit_shop", configs.ad_native_unit_shop)
+        resValue("string", "ad_native_unit_popup", configs.ad_native_unit_popup)
+        resValue("string", "ad_reward_unit_profile", configs.ad_reward_unit_profile)
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'instabooster'
+            keyPassword 'android'
+            storeFile file('KEY_STORE/release.jks')
+            storePassword 'android'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
+
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        releaseDebuggable {
+            initWith release
+            debuggable true
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules-no-obfuscation.pro'
+
+            matchingFallbacks = ['release']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+        freeCompilerArgs += [
+                "-Xopt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
+                "-Xopt-in=kotlinx.coroutines.FlowPreview",
+                "-Xopt-in=kotlinx.coroutines.DelicateCoroutinesApi",
+                "-Xopt-in=kotlinx.coroutines.ObsoleteCoroutinesApi"
+        ]
+    }
+    buildFeatures {
+        viewBinding true
+    }
+
+    lintOptions {
+        abortOnError false
+        htmlReport true
+        xmlReport true
+        disable 'InvalidPackage'
+        checkOnly 'Interoperability'
+    }
+
+    configurations {
+        all*.exclude module: 'javax.annotation'
+    }
+}
+
+dependencies {
+    def dependency = rootProject.ext
+
+    implementation project(path: ':core')
+    implementation project(path: ':core_ui')
+
+    implementation dependency.DI
+    implementation dependency.googleService
+
+    kapt dependency.processor
+}
+
+// Generates the apk with set name.
+def apkName = rootProject.ext.versionInfo.apkName
+def versionName = rootProject.ext.versionInfo.versionName
+project.archivesBaseName = apkName + "_v_" + versionName + "_" + new Date().format('yyyy.MM.dd-HH.mm')

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextView">
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:fontFamily">@font/campton_book</item>
+    </style>
+
+    <style name="TextView.Primary">
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="TextView.Primary.Bold">
+        <item name="android:fontFamily">@font/campton_bold</item>
+    </style>
+
+    <style name="TextView.Title">
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:fontFamily">@font/campton_bold</item>
+        <item name="android:textSize">@dimen/text_size_24</item>
+    </style>
+
+    <style name="TextView.Tab">
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:fontFamily">@font/campton_bold</item>
+        <item name="android:textSize">@dimen/text_size_10</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.1</item>
+    </style>
+
+    <style name="TextView.Header">
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:fontFamily">@font/campton_bold</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
+    <style name="TextView.Header2">
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:fontFamily">@font/campton_bold</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
+    </style>
+
+
+    <style name="TextView.Secondary">
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="android:textColorHint">?android:textColorSecondary</item>
+    </style>
+
+    <style name="TextView.Secondary.Small">
+        <item name="android:textSize">@dimen/text_size_9</item>
+    </style>
+
+    <style name="TextView.AllCaps.Small" parent="TextView.Secondary.Small">
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="Button">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textSize">@dimen/text_size_13</item>
+        <item name="android:fontFamily">@font/campton_bold</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dimen48dp</item>
+    </style>
+
+    <style name="Button.Solid">
+        <item name="android:background">@drawable/selector_solid_button</item>
+    </style>
+
+    <style name="Button.Text">
+        <item name="android:textColor">?colorAccent</item>
+    </style>
+
+    <style name="InputView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dimen56dp</item>
+        <item name="android:paddingHorizontal">@dimen/dimen12dp</item>
+        <item name="android:paddingVertical">@dimen/dimen8dp</item>
+        <item name="android:background">@drawable/background_input_view</item>
+    </style>
+
+    <style name="TextView.BottomNavigationView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/campton_bold</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textSize">@dimen/text_size_10</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="ProgressDialogStyle">
+        <item name="android:windowBackground">@drawable/background_progress_dialog</item>
+    </style>
+
+    <style name="ConfirmDialogStyle" parent="Theme.MaterialComponents.DayNight.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/background_confirm_dialog</item>
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+
+        <item name="android:textColorPrimary">@color/color_text_primary</item>
+        <item name="android:textColorSecondary">@color/color_text_secondary</item>
+    </style>
+
+    <style name="NetworkDialogStyle" />
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_animation</item>
+        <item name="android:windowExitAnimation">@anim/slide_down_animation</item>
+    </style>
+
+    <style name="TextView.AdAttribution">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginEnd">4dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textAppearance">@style/TextView.Primary</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:text">@string/ad_attribution</item>
+        <item name="android:background">#FFCC66</item>
+    </style>
+
+</resources>

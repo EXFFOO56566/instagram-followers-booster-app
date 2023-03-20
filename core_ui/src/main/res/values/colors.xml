@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="black">#212121</color>
+    <color name="white">#FFFFFF</color>
+    
+    <color name="white_op_5">#0DFFFFFF</color>
+    <color name="white_op_6">#0FFFFFFF</color>
+    <color name="white_op_10">#1AFFFFFF</color>
+    <color name="white_op_12">#1FFFFFFF</color>>
+    <color name="white_op_15">#26FFFFFF</color>
+    <color name="white_op_16">#29FFFFFF</color>
+    <color name="white_op_20">#33FFFFFF</color>
+    <color name="white_op_25">#40FFFFFF</color>
+    <color name="white_op_30">#4DFFFFFF</color>
+    <color name="white_op_36">#5CFFFFFF</color>
+    <color name="white_op_40">#66FFFFFF</color>
+    <color name="white_op_48">#7AFFFFFF</color>
+    <color name="white_op_50">#80FFFFFF</color>
+    <color name="white_op_60">#99FFFFFF</color>
+    <color name="white_op_64">#99FFFFFF</color>
+    <color name="white_op_72">#B8FFFFFF</color>
+    <color name="white_op_80">#CCFFFFFF</color>
+    <color name="white_op_84">#D6FFFFFF</color>
+    <color name="white_op_90">#E6FFFFFF</color>
+</resources>

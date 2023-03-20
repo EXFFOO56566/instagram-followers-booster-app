@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_illustration"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen56dp"
+        android:text="Let’s start"
+        android:textAppearance="@style/TextView.Title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen16dp"
+        android:layout_marginVertical="@dimen/dimen16dp"
+        android:gravity="center"
+        android:text="You need to enter your instagram username to sync your data, and then explore the magic"
+        android:textAppearance="@style/TextView.Secondary" />
+
+    <com.lxquyen.instabooster.widget.InputView
+        android:id="@+id/input_username"
+        style="@style/InputView"
+        android:layout_marginHorizontal="@dimen/dimen16dp"
+        android:layout_marginVertical="@dimen/dimen16dp"
+        android:inputType="textNoSuggestions|textAutoComplete"
+        app:iv_hint="Instagram username"
+        app:iv_label="username" />
+
+    <TextView
+        android:id="@+id/btn_sign_in"
+        style="@style/Button.Solid"
+        android:layout_marginHorizontal="@dimen/dimen16dp"
+        android:enabled="false"
+        android:text="Sign in" />
+
+</LinearLayout>

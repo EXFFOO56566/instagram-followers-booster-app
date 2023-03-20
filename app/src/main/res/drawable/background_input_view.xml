@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/background_input_view_un_focus" android:state_activated="false" android:state_focused="false" />
+    <item android:drawable="@drawable/background_input_view_focused" android:state_activated="false" android:state_focused="true" />
+    <item android:drawable="@drawable/background_input_view_error" android:state_activated="true" />
+</selector>

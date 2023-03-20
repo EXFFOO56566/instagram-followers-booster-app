@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_illustration"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_facecry" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen16dp"
+        android:gravity="center"
+        android:text="There are something wrong. Please wait a minute"
+        android:textAppearance="@style/TextView.Primary.Bold"
+        android:textSize="@dimen/text_size_20" />
+
+    <TextView
+        android:id="@+id/tv_refresh"
+        style="@style/Button.Solid"
+        android:visibility="gone"
+        android:layout_width="@dimen/dimen180dp"
+        android:layout_height="@dimen/dimen56dp"
+        android:text="Refresh App" />
+</LinearLayout>

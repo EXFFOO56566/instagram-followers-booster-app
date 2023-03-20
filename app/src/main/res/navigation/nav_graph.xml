@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/launchingFragment">
+
+    <action
+        android:id="@+id/global_action_to_confirmDialogFragment"
+        app:destination="@id/confirmDialogFragment" />
+    <action
+        android:id="@+id/global_action_to_welcomeDialogFragment"
+        app:destination="@id/welcomeDialogFragment" />
+
+    <fragment
+        android:id="@+id/launchingFragment"
+        android:name="com.lxquyen.instabooster.ui.launching.LaunchingFragment"
+        android:label="LaunchingFragment"
+        tools:layout="@layout/fragment_launching">
+        <action
+            android:id="@+id/action_launchingFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/launchingFragment"
+            app:popUpToInclusive="true">
+            <argument
+                android:name="userArg"
+                android:defaultValue="@null"
+                app:argType="com.lxquyen.instabooster.data.model.User"
+                app:nullable="true" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.lxquyen.instabooster.ui.main.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+
+        <argument
+            android:name="userArg"
+            android:defaultValue="@null"
+            app:argType="com.lxquyen.instabooster.data.model.User"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_launchingFragment"
+            app:destination="@id/launchingFragment"
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <dialog
+        android:id="@+id/confirmDialogFragment"
+        android:name="com.lxquyen.instabooster.utils.dialog.ConfirmDialogFragment"
+        android:label="ConfirmDialogFragment"
+        tools:layout="@layout/dialog_confirm">
+
+        <argument
+            android:name="dialogTypeArg"
+            app:argType="integer"
+            app:nullable="false" />
+
+    </dialog>
+    <dialog
+        android:id="@+id/welcomeDialogFragment"
+        android:name="com.lxquyen.instabooster.utils.dialog.WelcomeDialogFragment"
+        android:label="WelcomeDialogFragment"
+        tools:layout="@layout/dialog_welcome">
+
+        <argument
+            android:name="userArg"
+            android:defaultValue="@null"
+            app:argType="com.lxquyen.instabooster.data.model.User"
+            app:nullable="true" />
+    </dialog>
+</navigation>

@@ -1,0 +1,69 @@
+ext {
+    //UI
+    material = '1.5.0'
+    core_ktx = '1.7.0'
+    appCompat = '1.4.1'
+    constraintlayout = '2.1.3'
+    navigation = '2.4.2'
+    swiperefreshlayout = '1.1.0'
+
+    //Common
+    timber = '4.7.1'
+    kotlin_version = '1.5.2'
+
+    //DI
+    hilt = "2.41"
+
+    //Networking
+    okHttp = '4.9.0'
+    retrofit2 = '2.9.0'
+    gson = '2.8.5'
+    glide = '4.9.0'
+
+    //Data
+    datastore = "1.0.0"
+
+    UI = [
+            "com.google.android.material:material:$material",
+            "androidx.core:core-ktx:$core_ktx",
+            "androidx.appcompat:appcompat:$appCompat",
+            "androidx.constraintlayout:constraintlayout:$constraintlayout",
+            "androidx.navigation:navigation-fragment-ktx:$navigation",
+            "androidx.navigation:navigation-ui-ktx:$navigation",
+            "androidx.swiperefreshlayout:swiperefreshlayout:$swiperefreshlayout",
+
+            "com.tbuonomo:dotsindicator:4.3",
+            "com.airbnb.android:lottie:3.4.4"
+    ]
+
+    common = [
+            "com.jakewharton.timber:timber:$timber",
+            "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_version"
+    ]
+
+    networking = [
+            "com.squareup.okhttp3:okhttp:$okHttp",
+            "com.squareup.okhttp3:logging-interceptor:$okHttp",
+            "com.squareup.retrofit2:retrofit:$retrofit2",
+            "com.squareup.retrofit2:converter-gson:$retrofit2",
+            "com.google.code.gson:gson:$gson",
+            "com.github.bumptech.glide:glide:$glide",
+    ]
+
+    data = [
+            "androidx.datastore:datastore-preferences:$datastore",
+    ]
+
+    googleService = [
+            "com.google.android.gms:play-services-ads:21.0.0",
+            "com.anjlab.android.iab.v3:library:2.0.3"
+    ]
+
+    DI = [
+            "com.google.dagger:hilt-android:$hilt"
+    ]
+
+    processor = [
+            "com.google.dagger:hilt-compiler:$hilt",
+    ]
+}

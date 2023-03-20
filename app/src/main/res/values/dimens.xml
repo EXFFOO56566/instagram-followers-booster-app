@@ -1,0 +1,3 @@
+<resources>
+    <dimen name="default_stack_spacing">12dp</dimen>
+</resources>
